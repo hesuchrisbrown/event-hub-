@@ -1,23 +1,16 @@
 import './App.css'
-import Header from './components/Header';
+import { BrowserRouter, Routes, Route } from "react-router";
+import Home from './pages/Home.jsx';
+import Register from './pages/Register.jsx';
+
+
 function App() {
   return (
-    <>
-      <Header></Header>
-
-      <main>
-
-      </main>
-      <footer>
-        <footer className="mt-130 border footer sm:footer-horizontal footer-center bg-base-300 text-base-content p-4">
-          <aside>
-            <p>Copyright © {new Date().getFullYear()} - All right reserved by ACME Industries Ltd</p>
-          </aside>
-        </footer>
-      </footer>
-    </>
-
-  );
+    <Routes>
+      <Route path="/" element={<Home />} />
+       <Route path="/register" element={<Register />} />
+    </Routes>
+  )
 }
 
-export default App
+export default App;
