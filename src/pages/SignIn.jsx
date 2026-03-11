@@ -1,17 +1,17 @@
 import React from 'react'
 import Header from '../components/Header'
-import footer from 'daisyui/components/footer';
 import Main from '../components/Main'
 import { Link } from "react-router-dom";
 import PageWrapper from "../components/PageWrapper";
 
-const Register = () => {
-    return (
-        <PageWrapper>
+
+const SignIn = () => {
+  return (
+      <PageWrapper>
             <Header />
             <Main>
-                <p>This is Register Page</p>
-                <Link to="/" className="btn btn-primary mt-4 ">
+                <p>SIgn In page</p>
+                <Link to="/" className="btn btn-primary mt-4">
                     Go to Homepage
                 </Link>
 
@@ -23,4 +23,4 @@ const Register = () => {
     );
 };
 
-export default Register;
+export default SignIn
