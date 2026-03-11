@@ -21,17 +21,26 @@ const Register = () => {
         setformData({ ...formData, [inputName]: inputValue });
     };
 
-    const handleSubmit = async () => {
-        const { data, error } = await supabase.auth.signUp({
-            email: formData.email,
-            password: formData.password,
-        });
+const handleSubmit = async (event) => {
+    event.preventDefault();
 
-        if (error) alert(error);
-        if (data) {
-            console.log(data);
-        }
-    };
+    if (!formData.email || !formData.password) {
+        alert("Email and password are required");
+        return;
+    }
+
+    const { data, error } = await supabase.auth.signUp({
+        email: formData.email.trim(),
+        password: formData.password,
+    });
+
+    if (error) {
+        alert(error.message);
+        return;
+    }
+
+    console.log(data);
+};
 
     return (
         <PageWrapper>
@@ -62,7 +71,7 @@ const Register = () => {
                         <Input
                             label="Email"
                             name="email"
-                            type="text"
+                            type="email"
                             placeholder="Enter your Email"
                             className="w-full"
                             onChange={handleInputChange}
