@@ -1,11 +1,13 @@
-import React from 'react'
+import React from "react";
 
-const Main = ({ children }) => {
-    return (
-        <main className="flex-1 max-w-7xl mx-auto w-full md:px-2 lg:px-0 pt-5">
-            {children}
-        </main>
-    );
+const Main = ({ children, className }) => {
+	return (
+		<main
+			className={`flex-1 max-w-7xl mx-auto w-full md:px-2 lg:px-0 pt-5 ${className}`}
+		>
+			{children}
+		</main>
+	);
 };
 
-export default Main
+export default Main;

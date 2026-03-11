@@ -1,26 +1,31 @@
-import React from 'react'
-import Header from '../components/Header'
-import footer from 'daisyui/components/footer';
-import Main from '../components/Main'
-import { Link } from "react-router-dom";
+import React from "react";
+import Header from "../components/Header";
+import Footer from "../components/Footer";
+import Main from "../components/Main";
 import PageWrapper from "../components/PageWrapper";
+import Card from "../components/Card";
+import Input from "../components/Input";
 
 const Register = () => {
-    return (
-        <PageWrapper>
-            <Header />
-            <Main>
-                <p>This is Register Page</p>
-                <Link to="/" className="btn btn-primary mt-4 ">
-                    Go to Homepage
-                </Link>
-
-            </Main>
-            <footer className="footer p-10 bg-base-200 text-base-content">
-                <p>© 2026 Event Hub. All rights reserved.</p>
-            </footer>
-        </PageWrapper>
-    );
+	return (
+		<PageWrapper>
+			<Header />
+			<Main className="flex justify-center">
+				<div className="flex items-center">
+					<Card>
+						<h1 className="text-xl font-bold">Signup</h1>
+						<Input
+							label="Firstname"
+							name="firstname"
+							type="text"
+							placeholder="Enter your name"
+						/>
+					</Card>
+				</div>
+			</Main>
+			<Footer />
+		</PageWrapper>
+	);
 };
 
 export default Register;

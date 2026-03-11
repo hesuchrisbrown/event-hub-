@@ -9,8 +9,8 @@ const Header = () => {
                 {/* Logo */}
                 <div className="flex-1">
                     <a className="btn btn-ghost text-2xl font-bold" style={{ fontFamily: 'Montserrat, sans-serif' }}>
-                        <span style={{ color: '#00ACEE' }}>Only</span>
-                        <span style={{ color: 'white' }}>Caps</span>
+                        <span style={{ color: '#00ACEE' }}>Event</span>
+                        <span style={{ color: 'white' }}>Hub</span>
                     </a>
                 </div>
 
